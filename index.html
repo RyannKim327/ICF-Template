@@ -8,6 +8,7 @@
 		<meta name="og:keywords" content="Immanuel CHriatian Fellowship, ICF, ICFNews, Immanuel Youth">
 		<title>Welcome to Immanuel News Portal</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="media-query.css">
 	</head>
 	<body>
 		<header>
@@ -38,6 +39,7 @@
 					<li title="News">News</li>
 					<li title="News">Events</li>
 					<li title="Service">Service</li>
+					<li title="Three blocks article" id="toggle">Three blocks article</li>
 				</ul>
 			</nav>
 			<div class="base">
@@ -52,45 +54,5 @@
 			<h3 id="footer">Immanuel Christian Fellowship</h3>
 		</footer>
 	</body>
-	<script type="text/javascript">
-		let i = 0
-		let copy = true
-		let article = () => {
-			let title = document.getElementById("title")
-			let subtitle = document.getElementById("subtitle")
-			let text = document.getElementById("text")
-			if(copy){
-				let template = `Title: ${title.textContent} - ${subtitle.textContent}\n\n~ ${text.textContent}`
-				window.navigator.clipboard.writeText(template)
-				i = 0
-				document.getElementById("footer").textContent = ""
-				copied()
-				copy = false
-			}
-		}
-		let copied = () => {
-			let text = "Text Copied"
-			if(i < text.length){
-				document.getElementById("footer").textContent += text[i]
-				i++
-				setTimeout(copied, 50)
-			}else{
-				i = 0
-				setTimeout(() => {
-					document.getElementById("footer").textContent = ""
-					back()
-				}, 1500)
-			}
-		}
-		let back = () => {
-			let text = "Immanuel Christian Fellowship"
-			if(i < text.length){
-				document.getElementById("footer").textContent += text[i]
-				i++
-				setTimeout(back, 75)
-			}else{
-				copy = true
-			}
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </html>

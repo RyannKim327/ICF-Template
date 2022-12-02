@@ -18,6 +18,9 @@
 body{
 	background-color: var(--background);
 }
+
+/* Heaader */
+
 header{
 	background-color: var(--background);
 	text-align: center;
@@ -35,6 +38,7 @@ header h5{
 	font-family: "Courier New", monospace;
 	color: var(--maroon);
 }
+
 header .search input, header .search button{
 	background-color: transparent;
 	color:  #ffffff;
@@ -52,34 +56,17 @@ header .search input::placeholder{
 	font-size: 0.75em;
 	font-family: "Times New Roman", serif;
 }
+
 main{
 	margin: var(--margin);
 	display: flex;
 	margin-bottom: 3em;
 }
+
 main nav{
 	width: 15em;
 	border: var(--borderHeader);
 	margin: var(--margin);
-}
-.base{
-	width: 80em;
-	text-align: justify;
-}
-.base .article-panel,
-.base .article-panel h1,
-.base .article-panel h3,
-.base .article-panel article{
-	user-select: text;
-}
-.base article{
-	line-height: 19px;
-	padding: var(--margin);
-}
-.base article::first-letter{
-	display: inline;
-	color: var(--maroon);
-	font-size: 35px;
 }
 main nav h1{
 	text-align: center;
@@ -103,6 +90,36 @@ main nav ul li:nth-child(even){
 main nav ul li:last-child{
 	border-bottom: 0;
 }
+
+
+main .base{
+	width: 80em;
+	text-align: justify;
+}
+main .base .article-panel,
+main .base .article-panel h1,
+main .base .article-panel h3,
+main .base .article-panel article{
+	user-select: text;
+}
+main .base article{
+	line-height: 19px;
+	padding: var(--margin);
+}
+main .base .article-panel .three-blocks{
+	display: flex;
+	flex-direction: row;
+}
+main .base .article-panel .three-blocks span{
+	width: 16em;
+	padding: 0.5em;
+}
+main .base .article-panel article span:first-child::first-letter{
+	display: inline !important;
+	color: var(--maroon) !important;
+	font-size: 35px !important;
+}
+
 footer{
 	text-align: center;
 	border: var(--borderHeader);
@@ -114,39 +131,4 @@ footer{
 	bottom: 0;
 	left: 0;
 	right: 0;
-}
-@media only screen and (min-width: 768px){
-	header{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-	header .container h1, header .container h5{
-		display: inline;
-	}
-	header .container{
-		display: flex;
-		flex-wrap: nowrap;
-		flex-direction: row;
-		text-align: center;
-		width: 35em;
-	}
-	header .container div{
-		display: flex;
-		flex-direction: column;
-	}
-	.search{
-		display: inline;
-		position: absolute;
-		right: 1.5em;
-		top: 2.5em;
-	}
-}
-@media only screen and (max-width: 768px){
-	.search, main nav{
-		display: none;
-	}
-	main .base{
-		width: 100%;
-	}
 }
