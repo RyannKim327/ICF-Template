@@ -1,9 +1,10 @@
 :root{
-	--background: #dedede;
+	--background: #cfffcf;
 	--borderHeader: 1px solid #000000;
-	--maroonWithOpacity: rgba(90, 0, 0, 0.9);
-	--maroon: #900000;
-	--lightMaroon: rgba(190, 100, 100, 1.0);
+	--greenWithOpacity: rgba(0, 90, 0, 0.9);
+	--green: #009000;
+	--darkGreen: #005000;
+	--lightGreen: rgba(100, 190, 100, 1.0);
 	--margin: 0.5em;
 	--hover-c: #ffffff;
 }
@@ -19,35 +20,33 @@ body{
 	background-color: var(--background);
 }
 
-/* Heaader */
-
 header{
 	background-color: var(--background);
 	text-align: center;
 	border: var(--borderHeader);
 	padding: 1em;
 	margin: var(--margin);
-	box-shadow: 3px 3px 8px var(--lightMaroon);
+	box-shadow: 3px 3px 8px var(--lightGreen);
 }
 header h1{
 	font-family: "Times New Roman", serif;
-	text-shadow: 1px 1px 3px var(--lightMaroon);
-	color: var(--maroon);
+	text-shadow: 1px 1px 3px var(--lightGreen);
+	color: var(--green);
 }
 header h5{
 	font-family: "Courier New", monospace;
-	color: var(--maroon);
+	color: var(--green);
 }
 
 header .search input, header .search button{
 	background-color: transparent;
-	color:  #ffffff;
+	color: #ffffff;
 	padding: 3px 8px;
 	font-family: "Times New Roman", serif;
 	font-size: 0.75em;
 }
 header .search{
-	background-color: var(--maroonWithOpacity);
+	background-color: var(--greenWithOpacity);
 	color:  #ffffff;
 	border-radius: 5em;
 }
@@ -70,9 +69,10 @@ main nav{
 }
 main nav h1{
 	text-align: center;
+	color: var(--green);
 }
 main nav ul li:hover{
-	background-color: var(--maroon) !important;
+	background-color: var(--green) !important;
 	color: var(--hover-c);
 }
 main nav ul, main nav ul li{
@@ -82,10 +82,12 @@ main nav ul, main nav ul li{
 }
 main nav ul li{
 	padding: 1em;
-	border-bottom: 1px solid #000000
+	border-bottom: 1px solid #000000;
+	color: var(--darkGreen);
+	font-weight: bold;
 }
 main nav ul li:nth-child(even){
-	background-color: #ededed;
+	background-color: #bcffbc;
 }
 main nav ul li:last-child{
 	border-bottom: 0;
@@ -101,6 +103,10 @@ main .base .article-panel h1,
 main .base .article-panel h3,
 main .base .article-panel article{
 	user-select: text;
+}
+main .base .article-panel h1,
+main .base .article-panel h3{
+	color: var(--darkGreen);
 }
 main .base article{
 	line-height: 19px;
@@ -118,7 +124,7 @@ main .base .article-panel .three-blocks span:nth-child(even){
 }
 main .base .article-panel article span:first-child::first-letter, main .base .article-panel article::first-letter{
 	display: inline !important;
-	color: var(--maroon) !important;
+	color: var(--green) !important;
 	font-size: 35px !important;
 }
 
@@ -126,7 +132,7 @@ footer{
 	text-align: center;
 	border: var(--borderHeader);
 	margin: var(--margin);
-	background-color: var(--maroon);
+	background-color: var(--green);
 	color: #ffffff;
 	padding: 5px;
 	position: fixed;
