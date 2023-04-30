@@ -125,7 +125,7 @@ main .base .article-panel .three-blocks span{
 	width: 100%;
 }
 main .base .article-panel .three-blocks span:nth-child(even){
-	padding: 0.75em;
+	padding: 0 0.75em;
 }
 main .base .article-panel article span:first-child::first-letter, main .base .article-panel article::first-letter{
 	color: var(--green) !important;
