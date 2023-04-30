@@ -17,6 +17,8 @@
 }
 body{
 	background-color: var(--background);
+	height: 98vh;
+	width: 100%;
 }
 
 /* Heaader */
@@ -105,13 +107,16 @@ main .base .article-panel article{
 main .base article{
 	line-height: 19px;
 	padding: var(--margin);
+	max-width: 95%;
+	max-height: 100vh;
+	overflow-y: auto;
 }
 main .base .article-panel .three-blocks{
 	display: flex;
 	flex-direction: row;
 }
 main .base .article-panel .three-blocks span{
-	width: 16em;
+	width: 100%;
 }
 main .base .article-panel .three-blocks span:nth-child(even){
 	padding: 0.75em;
@@ -133,4 +138,18 @@ footer{
 	bottom: 0;
 	left: 0;
 	right: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+	background-color: #900000;
+	width: 0.5em;
+	border-radius: 5em;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #900000;
+	border-radius: 5em;
 }
